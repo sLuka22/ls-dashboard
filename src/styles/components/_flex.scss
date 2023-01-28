@@ -1,0 +1,83 @@
+@use "sass:math";
+
+$flex_gaps: (mobile: 20px, tablet: 30px, desktop: 40px) !default;
+
+.flex { display: flex; }
+.flex-inline { display: inline-flex; }
+
+// Gaps between items
+.flex--gaps {
+  margin-left: -#{math.div(map-get($flex_gaps, mobile), 2)};
+  margin-right: -#{math.div(map-get($flex_gaps, mobile), 2)};
+  > .flex__item {
+    padding-left: math.div(map-get($flex_gaps, mobile), 2);
+    padding-right: math.div(map-get($flex_gaps, mobile), 2);
+  }
+}
+.flex--big-gaps {
+  margin-left: -#{map-get($flex_gaps, mobile)};
+  margin-right: -#{map-get($flex_gaps, mobile)};
+  > .flex__item {
+    padding-left: map-get($flex_gaps, mobile);
+    padding-right: map-get($flex_gaps, mobile);
+  }
+}
+
+// Horizontal flow
+.flex--wrap { flex-wrap: wrap; } // items will wrap instead of overflowing rows
+.flex--wrap.flex--gaps { gap: map-get($flex_gaps, mobile); }
+.flex--wrap.flex--big-gaps { gap: map-get($flex_gaps, mobile) * 2; }
+
+.flex--reverse { flex-direction: row-reverse; } // items rendered in reverse order
+
+.flex--vertical {
+  flex-direction: column;
+  &.flex--reverse { flex-direction: column-reverse; }
+  &.flex--gaps {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.flex--vertical.flex--gaps > .flex__item {
+  padding: math.div(map-get($flex_gaps, mobile), 2) 0;
+}
+
+.flex--autosize, // items fit content size
+.flex--apart,    // items with space between
+.flex--spread,   // items with space around
+.flex--center,
+.flex--start,
+.flex--end {
+  > .flex__item { flex: 0 0 auto; }
+}
+.flex--apart { justify-content: space-between; }
+.flex--spread { justify-content: space-around; }
+.flex--center { justify-content: center; }
+
+// Vertical flow
+.flex--top { align-items: flex-start; }  // align items top edge
+.flex--bottom { align-items: flex-end; } // align items bottom edge
+.flex--middle { align-items: center; }   // align items to middle
+.flex--start { justify-content: flex-start; }
+.flex--end { justify-content: flex-end; }
+
+// Individual items
+.flex__item {
+  flex: 1 1 0;
+  min-width: 0;
+  &.flex__item--double { flex-grow: 2; }
+  &.flex__item--triple { flex-grow: 3; }
+  &.flex__item--quadra { flex-grow: 4; }
+  &.flex__item--penta { flex-grow: 5; }
+}
+
+.flex__item--autosize {
+  flex-grow: 0;
+  flex-basis: auto;
+}
+
+.flex__item--grow { flex-grow: 1; }
+
+// Flex items
+.flex-self--end { align-self: flex-end; }
+.flex-self--start { align-self: flex-start; }

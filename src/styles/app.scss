@@ -1,0 +1,76 @@
+
+// Layout
+
+$breakpoints: (tablet: 760, desktop: 1020);
+
+$gutter_s: (mobile: 10px, tablet: 16px, desktop: 20px);
+$gutter_m: (mobile: 20px, tablet: 30px, desktop: 40px);
+$gutter_l: (mobile: 30px, tablet: 46px, desktop: 60px);
+
+// Z-index layers
+$z_navigation: 100;
+
+
+// Typography
+
+$default_font_family: "Nunito", -apple-system, system-ui, sans-serif;
+
+// Font sizes (pixel units implied)
+
+$default_font_size: (mobile: 14, tablet: 15, desktop: 16);
+
+$font_h1: (mobile: 24, tablet: 32, desktop: 32);
+$font_h2: (mobile: 21, tablet: 24, desktop: 24);
+$font_h3: (mobile: 18, tablet: 20, desktop: 20);
+
+$font_xs: (mobile: 10, tablet: 11, desktop: 12);
+$font_s: (mobile: 12, tablet: 12, desktop: 14);
+$font_m: (mobile: 14, tablet: 15, desktop: 16);
+$font_l: (mobile: 16, tablet: 18, desktop: 18);
+
+$default_line_height: 1.375;
+
+// Colors
+
+// Brand color
+$dashboard_black: #3E363F;
+$dashboard_red: #DD403A;
+$dashboard_blue: #476996;
+$dashboard_green: #697A21;
+$dashboard_white: #FFFCE8;
+
+$dashboard_text: $dashboard_black;
+
+// Other colors
+$link_color: dodgerblue;
+$positive_tx: #51c03e;
+$positive_bg: #eefaf4;
+$negative_tx: #ef2119;
+$negative_bg: #fdf4f4;
+$info_tx: #3365f7;
+$info_bg: #f3f6ff;
+$warning_tx: #fca537;
+$warning_bg: #fffaf1;
+
+
+// Various visual features
+
+$border_radius_s: 4px;
+$border_radius_m: 6px;
+$border_radius_l: 20px;
+
+$shadow_s: 0 3px 6px rgba(#000, 0.2);
+$shadow: 0 3px 20px rgba(#000, 0.1);
+$shadow_l: 0 0 30px rgba(#000, 0.1);
+
+
+$navigation_height: 98px;
+$breadcrumb_height: 56px;
+
+// Components
+
+@import './common/mixins';
+@import './common/base';
+@import './common/typography';
+
+@import './components/flex';

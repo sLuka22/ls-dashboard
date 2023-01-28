@@ -1,0 +1,139 @@
+$default_font_family: system-ui, sans-serif !default;
+$default_font_size: (mobile: 14, tablet: 15, desktop: 16) !default;
+$font_h1: (mobile: 24, tablet: 32, desktop: 32) !default;
+$font_h2: (mobile: 20, tablet: 24, desktop: 24) !default;
+$font_h3: (mobile: 18, tablet: 20, desktop: 20) !default;
+$font_xs: (mobile: 10, tablet: 11, desktop: 12) !default;
+$font_s: (mobile: 12, tablet: 12, desktop: 14) !default;
+$font_m: (mobile: 14, tablet: 15, desktop: 16) !default;
+$font_l: (mobile: 16, tablet: 18, desktop: 18) !default;
+$default_line_height: 1.5 !default;
+$tx_color: #333 !default;
+$bg_color: #ddd !default;
+$link_color: dodgerblue !default;
+$positive_tx: forestgreen !default;
+$negative_tx: crimson !default;
+
+// Font sizes
+html { font-size: #{map-get($default_font_size, mobile)}px; }
+.h1, h1 { font-size: rem($font_h1); }
+.h2, h2 { font-size: rem($font_h2); }
+.h3, h3 { font-size: rem($font_h3); }
+.h4, h4 { font-size: inherit; }
+.f--xs { font-size: rem($font_xs); }
+.f--s { font-size: rem($font_s); }
+.f--m { font-size: rem($font_m); }
+.f--l { font-size: rem($font_l); }
+.f--xl { font-size: rem($font_h2); }
+.f--xxl { font-size: rem($font_h1); }
+@include breakpoint(tablet) {
+  html { font-size: #{map-get($default_font_size, tablet)}px; }
+  .h1, h1 { font-size: rem($font_h1, tablet); }
+  .h2, h2 { font-size: rem($font_h2, tablet); }
+  .h3, h3 { font-size: rem($font_h3, tablet); }
+  .f--xs { font-size: rem($font_xs, tablet); }
+  .f--s { font-size: rem($font_s, tablet); }
+  .f--m { font-size: rem($font_m, tablet); }
+  .f--l { font-size: rem($font_l, tablet); }
+  .f--xl { font-size: rem($font_h2, tablet); }
+  .f--xxl { font-size: rem($font_h1, tablet); }
+}
+@include breakpoint(desktop) {
+  html { font-size: #{map-get($default_font_size, desktop)}px; }
+  .h1, h1 { font-size: rem($font_h1, desktop); }
+  .h2, h2 { font-size: rem($font_h2, desktop); }
+  .h3, h3 { font-size: rem($font_h3, desktop); }
+  .f--xs { font-size: rem($font_xs, desktop); }
+  .f--s { font-size: rem($font_s, desktop); }
+  .f--m { font-size: rem($font_m, desktop); }
+  .f--l { font-size: rem($font_l, desktop); }
+  .f--xl { font-size: rem($font_h2, desktop); }
+  .f--xxl { font-size: rem($font_h1, desktop); }
+}
+
+body {
+  color: $tx_color;
+  background-color: $bg_color;
+  font-family: $default_font_family;
+  line-height: $default_line_height;
+  -webkit-font-smoothing: antialiased;
+  transition-property: color, background-color;
+  transition-duration: 150ms;
+}
+
+img, svg { vertical-align: middle; }
+
+hr { border-color: darken($bg_color, 5%) transparent lighten($bg_color, 5%); }
+
+p, ul, ol, table, blockquote, figure {
+  margin: 0 0 #{$default_line_height}em;
+  &:last-child { margin-bottom: 0; }
+}
+
+blockquote {
+  font-size: 1.25em;
+  font-style: italic;
+  margin-left: 2em;
+  padding-left: 2em;
+  border-left: 5px solid;
+}
+
+a { color: $link_color; }
+a:not(.button):visited { opacity: 0.5; }
+
+.h1, h1,
+.h2, h2,
+.h3, h3,
+.h4, h4 {
+  margin: 1.5em 0 0.75em;
+  line-height: 1.2;
+  font-weight: 500;
+  &:first-child { margin-top: 0; }
+}
+
+.f--inherit { font: inherit; }
+.f--bold, strong, b { font-weight: 500; }
+.f--bolder { font-weight: 700; }
+.f--italic { font-style: italic; }
+.f--normal {
+  font-weight: normal;
+  font-style: normal;
+}
+
+.t--left { text-align: left; }
+.t--right { text-align: right; }
+.t--center { text-align: center; }
+.t--justify {
+  text-align: justify;
+  word-break: normal;
+  // hyphens: auto;
+}
+.t--wrap { white-space: normal; }
+.t--nowrap { white-space: nowrap; }
+.t--uppercase { text-transform: uppercase; }
+.t--lowercase { text-transform: lowercase; }
+.t--capitalize { text-transform: capitalize; }
+.t--capitalize-first::first-letter { text-transform: capitalize; }
+.t--normal { text-transform: none; }
+.t--no-overflow {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.t--no-decoration { text-decoration: none; }
+
+.lh--1 { line-height: 1; }
+
+.c--inherit { color: inherit; }
+.c--error { color: $negative_tx; }
+.c--success { color: $positive_tx; }
+.c--important { color: $negative_tx !important; }
+.c--brand { color: $negative_tx !important; }
+
+.c--red { color: $dashboard_red; }
+.c--blue { color: $dashboard_blue; }
+
+.fill--tx { fill: $tx_color !important; }
+.fill--red { fill: $dashboard_red !important; }
+.fill--blue { fill: $dashboard_blue !important; }
+.fill--important { fill: $negative_tx !important; }
