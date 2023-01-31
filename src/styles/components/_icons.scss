@@ -1,0 +1,91 @@
+.icon {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.icon--s {
+  height: 24px;
+  width: 24px;
+}
+
+.icon--m {
+  height: 26px;
+  width: 26px;
+
+  @include breakpoint(tablet) {
+    height: 32px;
+    width: 32px;
+  }
+
+  @include breakpoint(desktop) {
+    height: 48px;
+    width: 38px;
+  }
+}
+
+.icon--l {
+  height: 30px;
+  width: 30px;
+
+  @include breakpoint(tablet) {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+.icon--xl {
+  height: 40px;
+  width: 40px;
+
+  @include breakpoint(tablet) {
+    height: 70px;
+    width: 60px;
+  }
+}
+
+.icon--xxl {
+  height: 40px;
+  width: 40px;
+
+  @include breakpoint(tablet) {
+    height: 70px;
+    width: 70px;
+  }
+}
+
+.icon--3xl {
+  height: 45px;
+  width: 40px;
+
+  @include breakpoint(tablet) {
+    height: 75px;
+    width: 75px;
+  }
+}
+
+.icon--flip-h { transform: scaleX(-1); }
+
+.icon--black {
+  color: $dashboard_white;
+  fill: $dashboard_white;
+  stroke: $dashboard_black;
+}
+
+.icon--white {
+  color: $dashboard_white;
+  fill: $dashboard_white;
+  stroke: $dashboard_white;
+}
+
+.icon--red {
+  color: $dashboard_red;
+  fill: $dashboard_red;
+  stroke: $dashboard_red;
+}
+
+.icon--blue {
+  color: $dashboard_blue;
+  fill: $dashboard_blue;
+  stroke: $dashboard_blue;
+}

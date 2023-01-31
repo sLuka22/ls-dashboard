@@ -69,6 +69,7 @@ $flex_gaps: (mobile: 20px, tablet: 30px, desktop: 40px) !default;
   &.flex__item--triple { flex-grow: 3; }
   &.flex__item--quadra { flex-grow: 4; }
   &.flex__item--penta { flex-grow: 5; }
+  &.flex__item--hexa { flex-grow: 6; }
 }
 
 .flex__item--autosize {
