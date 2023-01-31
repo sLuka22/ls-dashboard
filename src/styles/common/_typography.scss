@@ -8,7 +8,7 @@ $font_s: (mobile: 12, tablet: 12, desktop: 14) !default;
 $font_m: (mobile: 14, tablet: 15, desktop: 16) !default;
 $font_l: (mobile: 16, tablet: 18, desktop: 18) !default;
 $default_line_height: 1.5 !default;
-$tx_color: #333 !default;
+$tx_color: $dashboard_black !default;
 $bg_color: #ddd !default;
 $link_color: dodgerblue !default;
 $positive_tx: forestgreen !default;
@@ -130,6 +130,8 @@ a:not(.button):visited { opacity: 0.5; }
 .c--important { color: $negative_tx !important; }
 .c--brand { color: $negative_tx !important; }
 
+.c--light { color: $dashboard_white!important; }
+.c--dark { color: $dashboard_black !important; }
 .c--red { color: $dashboard_red; }
 .c--blue { color: $dashboard_blue; }
 

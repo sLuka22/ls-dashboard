@@ -175,7 +175,19 @@ img.responsive__element { object-fit: cover; }
 .container--m { max-width: 1300px; }
 .container--s { max-width: 1100px; }
 
+// Full height
+.height--full { height: 100vh; }
+
 // Rotations
 .rotate--cw { transform: rotate(90deg); }
 .rotate--ccw { transform: rotate(-90deg); }
 .rotate--flip { transform: rotate(180deg); }
+
+.bg--default { background-color: $dashboard_white !important; }
+.bg--dark { background-color: $dashboard_black !important; }
+.bg--green { background-color: $dashboard_green !important; }
+
+.border--top { border-top: solid 1px $dashboard_gray; }
+.border--right { border-right: solid 1px $dashboard_gray; }
+.border--bottom { border-bottom: solid 1px $dashboard_gray; }
+.border--left { border-left: solid 1px $dashboard_gray; }

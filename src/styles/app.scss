@@ -33,11 +33,14 @@ $default_line_height: 1.375;
 // Colors
 
 // Brand color
+// $dashboard_white: #FFFCE8;
+$dashboard_white: #FFF;
 $dashboard_black: #3E363F;
 $dashboard_red: #DD403A;
-$dashboard_blue: #476996;
+// $dashboard_blue: #476996;
+$dashboard_blue: #66b2ff;
 $dashboard_green: #697A21;
-$dashboard_white: #FFFCE8;
+$dashboard_gray: #dddddd;
 
 $dashboard_text: $dashboard_black;
 
@@ -74,3 +77,6 @@ $breadcrumb_height: 56px;
 @import './common/typography';
 
 @import './components/flex';
+@import './components/navbar';
+@import './components/sidebar';
+@import './components/icons';

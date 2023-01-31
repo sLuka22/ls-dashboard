@@ -1,0 +1,30 @@
+.sidebar__main .title {
+  font-size: 10px;
+  margin-bottom: 5px;
+}
+.sidebar__top { height: 50px; }
+.sidebar__middle .sidebar__menu {
+  margin: initial;
+  padding: initial;
+  list-style-type: none;
+  cursor: pointer;
+
+  .menu__item {
+    padding: 5px;
+
+    span { margin-left: 10px; }
+
+    &:hover { background-color: $dashboard_gray; }
+  }
+}
+
+.sidebar__main .collor-options {
+  padding: 5px;
+
+  .collor-option {
+    margin-right: 10px;
+    border: solid 1px $dashboard_black;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
