@@ -187,6 +187,7 @@ img.responsive__element { object-fit: cover; }
 .bg--dark { background-color: $dashboard_black !important; }
 .bg--green { background-color: $dashboard_green !important; }
 
+.border { border: solid 1px $dashboard_gray; }
 .border--top { border-top: solid 1px $dashboard_gray; }
 .border--right { border-right: solid 1px $dashboard_gray; }
 .border--bottom { border-bottom: solid 1px $dashboard_gray; }
