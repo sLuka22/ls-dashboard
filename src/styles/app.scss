@@ -41,6 +41,7 @@ $dashboard_red: #DD403A;
 $dashboard_blue: #66b2ff;
 $dashboard_green: #697A21;
 $dashboard_gray: #dddddd;
+$dashboard_gray--dark: #a6a6a6;
 
 $dashboard_text: $dashboard_black;
 
@@ -77,6 +78,8 @@ $breadcrumb_height: 56px;
 @import './common/typography';
 
 @import './components/flex';
+@import './components/home';
 @import './components/navbar';
 @import './components/sidebar';
 @import './components/icons';
+@import './components/widgets';
