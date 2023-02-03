@@ -1,0 +1,8 @@
+.circular-progress-bar { width: 40%; }
+
+.featured .bottom .content {
+  padding: 12px 20px 18px;
+
+  @include breakpoint(tablet) { padding: 20px 35px 20px; }
+  @include breakpoint(desktop) { padding: 35px 60px 25px; }
+}

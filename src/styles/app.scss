@@ -39,7 +39,7 @@ $dashboard_black: #3E363F;
 $dashboard_red: #DD403A;
 // $dashboard_blue: #476996;
 $dashboard_blue: #66b2ff;
-$dashboard_green: #697A21;
+$dashboard_green: #32a852;
 $dashboard_gray: #dddddd;
 $dashboard_gray--dark: #a6a6a6;
 
@@ -83,3 +83,5 @@ $breadcrumb_height: 56px;
 @import './components/sidebar';
 @import './components/icons';
 @import './components/widgets';
+@import './components/chart';
+@import './components/featured';
