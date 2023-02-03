@@ -1,6 +1,4 @@
-import React from "react"
-
-//Icons
+// Icons
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import ManageSearchIcon from '@mui/icons-material/ManageSearch';
@@ -15,9 +13,9 @@ const Navbar = () => {
           <ManageSearchIcon className="icon icon--s icon--blue" />
         </div>
         <div className="navbar__icons  flex flex--middle">
-          <LanguageIcon className="icon icon--s icon--blue m-left--s" />
-          <GitHubIcon className="icon icon--s icon--blue m-left--s" />
-          <LinkedInIcon className="icon icon--s icon--blue m-left--s" />
+          <a href="https://www.google.com/" className="social__link m-left--s"><LanguageIcon className="icon icon--s icon--blue" /></a>
+          <a href="https://github.com/" className="social__link m-left--s"><GitHubIcon className="icon icon--s icon--blue" /></a>
+          <a href="https://si.linkedin.com/" className="social__link m-left--s"><LinkedInIcon className="icon icon--s icon--blue" /></a>
         </div>
       </div>
     </header>

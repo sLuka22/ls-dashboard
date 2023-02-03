@@ -38,6 +38,8 @@ img, svg {
 }
 svg { pointer-events: none; }
 
+a { color: $dashboard_gray--dark !important; }
+
 hr {
   display: block;
   height: 0;
@@ -192,3 +194,9 @@ img.responsive__element { object-fit: cover; }
 .border--right { border-right: solid 1px $dashboard_gray; }
 .border--bottom { border-bottom: solid 1px $dashboard_gray; }
 .border--left { border-left: solid 1px $dashboard_gray; }
+
+.component {
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+}
