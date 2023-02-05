@@ -1,8 +1,11 @@
+import { NavLink } from 'react-router-dom'
+
 // Icons
-import DashboardIcon from '@mui/icons-material/Dashboard';
-import GroupIcon from '@mui/icons-material/Group';
-import CategoryIcon from '@mui/icons-material/Category';
-import QueryStatsIcon from '@mui/icons-material/QueryStats';
+import DashboardIcon from '@mui/icons-material/Dashboard'
+import GroupIcon from '@mui/icons-material/Group'
+import CategoryIcon from '@mui/icons-material/Category'
+import QueryStatsIcon from '@mui/icons-material/QueryStats'
+import CurrencyBitcoinIcon from '@mui/icons-material/CurrencyBitcoin'
 
 const Sidebar = () => {
   return (
@@ -11,7 +14,7 @@ const Sidebar = () => {
         <span className="logo f--bolder">dashboard admin</span>
       </div>
       <div className="sidebar__middle m-left--s">
-        <ul className="sidebar__menu">
+        <ul className="sidebar__menu front-page-widgets">
           <p className="title m-top--s f--bolder">MAIN</p>
           <li className="menu__item flex flex--middle">
             <DashboardIcon className="icon icon--s icon--blue" />
@@ -28,6 +31,15 @@ const Sidebar = () => {
           <li className="menu__item flex flex--middle">
             <QueryStatsIcon className="icon icon--s icon--blue" />
             <span className="f--bold">Statistics</span>
+          </li>
+        </ul>
+        <ul className="sidebar__menu sidebar-pages">
+          <p className="title m-top--s f--bolder">PAGES</p>
+          <li className="menu__item flex flex--middle">
+            <NavLink to="/crypto-list" className="f--bold c--basic t--no-decoration">
+              <CurrencyBitcoinIcon className="icon icon--s icon--blue" />
+              <span className="link-text">Crypto</span>
+            </NavLink>
           </li>
         </ul>
       </div>

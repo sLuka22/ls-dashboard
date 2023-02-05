@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
-import List from './components/List';
+import CryptoList from './pages/CryptoList';
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
         <Routes>
           <Route path='/'>
             <Route index='/' element={<Home />} />
-            <Route path='list' element={<List />} />
+            <Route path='crypto-list' element={<CryptoList />} />
           </Route>
         </Routes>
       </BrowserRouter>

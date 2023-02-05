@@ -38,7 +38,7 @@ img, svg {
 }
 svg { pointer-events: none; }
 
-a { color: $dashboard_gray--dark !important; }
+a { color: $dashboard_gray--dark; }
 
 hr {
   display: block;
