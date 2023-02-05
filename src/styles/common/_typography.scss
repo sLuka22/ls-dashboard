@@ -124,6 +124,7 @@ a:not(.button):visited { opacity: 0.5; }
 
 .lh--1 { line-height: 1; }
 
+.c--basic { color: $tx_color; }
 .c--inherit { color: inherit; }
 .c--secondary { color: $dashboard_gray--dark; }
 .c--error { color: $negative_tx; }
