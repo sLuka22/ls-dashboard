@@ -1,0 +1,5 @@
+.country__table {
+  th { background-color: $dashboard_blue--light; }
+  tr:nth-child(2n) { background-color: $dashboard_gray; }
+  p { margin: initial; }
+}

@@ -44,7 +44,7 @@ const Chart = () => {
     <div className="chart component flex__item flex__item--quadra flex flex--vertical">
       <div className="chart-title"><h2 className="title c--secondary f--s f--bolder">LAST TWO WEEKS (workout time)</h2></div>
       <div className="chart-responsive__container m-top--s">
-        <ResponsiveContainer width="100%" height="100%">
+        <ResponsiveContainer width="100%" height="100%" maxHeight={"400px"}>
           <AreaChart data={data}
             margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
             <defs>

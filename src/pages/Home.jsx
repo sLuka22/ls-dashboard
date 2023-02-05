@@ -3,6 +3,7 @@ import Sidebar from "../components/Sidebar"
 import Widget from "../components/Widget"
 import Chart from "../components/Chart"
 import Featured from "../components/Featured"
+import CountryTable from "../components/CountryTable"
 
 const Home = () => {
     return (
@@ -20,6 +21,9 @@ const Home = () => {
               <Featured />
               <Chart />
             </div>
+          <div className="list__container container m-top--m">
+            <CountryTable />
+          </div>
           </div>
         </main>
     )
