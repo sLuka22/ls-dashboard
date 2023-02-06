@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 
 // Icons
 import DashboardIcon from '@mui/icons-material/Dashboard'
@@ -17,26 +17,34 @@ const Sidebar = () => {
         <ul className="sidebar__menu front-page-widgets">
           <p className="title m-top--s f--bolder">MAIN</p>
           <li className="menu__item flex flex--middle">
-            <DashboardIcon className="icon icon--s icon--blue" />
-            <span className="f--bold">Dashboard</span>
+            <NavLink to="/" className="f--bold t--no-decoration">
+              <DashboardIcon className="icon icon--s icon--blue" />
+              <span className="link-text">Dashboard</span>
+            </NavLink>
           </li>
           <li className="menu__item flex flex--middle">
-            <GroupIcon className="icon icon--s icon--blue" />
-            <span className="f--bold">Users</span>
+            <Link to="/" className="f--bold t--no-decoration">
+              <GroupIcon className="icon icon--s icon--blue" />
+              <span className="link-text">Users</span>
+            </Link>
           </li>
           <li className="menu__item flex flex--middle">
-            <CategoryIcon className="icon icon--s icon--blue" />
-            <span className="f--bold">Products</span>
+            <NavLink to="/" className="f--bold t--no-decoration">
+              <CategoryIcon className="icon icon--s icon--blue" />
+              <span className="link-text">Products</span>
+            </NavLink>
           </li>
           <li className="menu__item flex flex--middle">
-            <QueryStatsIcon className="icon icon--s icon--blue" />
-            <span className="f--bold">Statistics</span>
+            <NavLink to="/" className="f--bold t--no-decoration">
+              <QueryStatsIcon className="icon icon--s icon--blue" />
+              <span className="link-text">Statistics</span>
+            </NavLink>
           </li>
         </ul>
         <ul className="sidebar__menu sidebar-pages">
           <p className="title m-top--s f--bolder">PAGES</p>
           <li className="menu__item flex flex--middle">
-            <NavLink to="/crypto-list" className="f--bold c--basic t--no-decoration">
+            <NavLink to="/crypto-list" className="f--bold t--no-decoration">
               <CurrencyBitcoinIcon className="icon icon--s icon--blue" />
               <span className="link-text">Crypto</span>
             </NavLink>

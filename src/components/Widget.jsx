@@ -63,7 +63,7 @@ const Widget = ({ type }) => {
       <div className="left flex flex--vertical flex--apart">
         <span className="title c--secondary f--bolder f--s">{data.title}</span>
         <span className="counter f--xxl">{amount}{data.isMoney && ' €'}</span>
-        <span className="all-users__link"><a href="">{data.link}</a></span>
+        <a href="" className="widget-link">{data.link}</a>
       </div>
       <div className="right flex flex--vertical flex--apart">
         <div className="percentage flex flex--middle">

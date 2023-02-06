@@ -11,17 +11,17 @@ const Home = () => {
           <Sidebar />
           <div className="homepage home-page__container flex__item flex__item--hexa">
             <Navbar />
-            <div className="widgets__container container flex m-top--s">
+            <div id="dashboard" className="widgets__container container flex m-top--s">
               <Widget type="user" />
               <Widget type="order" />
               <Widget type="earnings" />
               <Widget type="balance" />
             </div>
-            <div className="charts__container container flex m-top--m">
+            <div id="statistics" className="charts__container container flex m-top--m">
               <Featured />
               <Chart />
             </div>
-          <div className="list__container container m-top--m">
+          <div id="country-table" className="list__container container m-top--m">
             <CountryTable />
           </div>
           </div>

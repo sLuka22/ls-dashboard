@@ -47,7 +47,7 @@ $dashboard_gray--dark: #a6a6a6;
 $dashboard_text: $dashboard_black;
 
 // Other colors
-$link_color: dodgerblue;
+$link_color: $dashboard_black;
 $positive_tx: #51c03e;
 $positive_bg: #eefaf4;
 $negative_tx: #ef2119;
@@ -87,3 +87,4 @@ $breadcrumb_height: 56px;
 @import './components/chart';
 @import './components/featured';
 @import './components/countryTable';
+@import './components/CryptoList';
