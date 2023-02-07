@@ -1,7 +1,7 @@
 
 // Layout
 
-$breakpoints: (tablet: 760, desktop: 1020);
+$breakpoints: (mobile: 500, tablet: 760, laptop: 960, desktop: 1200);
 
 $gutter_s: (mobile: 10px, tablet: 16px, desktop: 20px);
 $gutter_m: (mobile: 20px, tablet: 30px, desktop: 40px);
@@ -88,3 +88,4 @@ $breadcrumb_height: 56px;
 @import './components/featured';
 @import './components/countryTable';
 @import './components/CryptoList';
+@import './components/singleCrypto';

@@ -1,17 +1,17 @@
-import * as React from 'react';
+import * as React from 'react'
 import { useState, useEffect } from 'react'
 import axios from "axios"
 import CryptoData from "../CryptoData"
-import Paper from '@mui/material/Paper';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TablePagination from '@mui/material/TablePagination';
-import TableRow from '@mui/material/TableRow';
-import CircularProgress from '@mui/material/CircularProgress';
-import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper'
+import Table from '@mui/material/Table'
+import TableBody from '@mui/material/TableBody'
+import TableCell from '@mui/material/TableCell'
+import TableContainer from '@mui/material/TableContainer'
+import TableHead from '@mui/material/TableHead'
+import TablePagination from '@mui/material/TablePagination'
+import TableRow from '@mui/material/TableRow'
+import CircularProgress from '@mui/material/CircularProgress'
+import Box from '@mui/material/Box'
 
 const columns = [
   {
@@ -39,12 +39,12 @@ const columns = [
     type: 'number',
     width: 130,
   },
-];
+]
 
 const CryptoDataTable = () => {
-  const [data, setData] = useState(null);
-  const [page, setPage] = React.useState(0);
-  const [rowsPerPage, setRowsPerPage] = React.useState(25);
+  const [data, setData] = useState(null)
+  const [page, setPage] = React.useState(0)
+  const [rowsPerPage, setRowsPerPage] = React.useState(25)
 
   useEffect(() => {
     axios
@@ -58,22 +58,22 @@ const CryptoDataTable = () => {
           market_cap: item.market_cap,
           ath: item.ath,
           circulating_supply : item.circulating_supply
-        }));
-        setData(filteredData);
+        }))
+        setData(filteredData)
       })
       .catch(error => {
-        console.error(error);
-      });
-  }, []);
+        console.error(error)
+      })
+  }, [])
 
   const handleChangePage = (event, newPage) => {
-    setPage(newPage);
-  };
+    setPage(newPage)
+  }
 
   const handleChangeRowsPerPage = (event) => {
-    setRowsPerPage(+event.target.value);
-    setPage(0);
-  };
+    setRowsPerPage(+event.target.value)
+    setPage(0)
+  }
 
   return (
     <div className="flex flex--center width--full">
@@ -102,17 +102,17 @@ const CryptoDataTable = () => {
                     return (
                       <TableRow hover role="checkbox" tabIndex={-1} key={row.id}>
                         {columns.map((column) => {
-                          const value = row[column.field];
+                          const value = row[column.field]
                           return (
                             <TableCell key={column.field} align={column.align}>
                               {column.renderCell
                                 ? column.renderCell({ value })
                                 : value}
                             </TableCell>
-                          );
+                          )
                         })}
                       </TableRow>
-                    );
+                    )
                   })
               }
             </TableBody>
@@ -131,7 +131,7 @@ const CryptoDataTable = () => {
       : <div><Box><CircularProgress size={75} sx={{ color: '#66b2ff' }} /></Box></div>
     }
   </div>
-  );
+  )
 }
 
 export default CryptoDataTable

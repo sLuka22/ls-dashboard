@@ -1,9 +1,9 @@
 // Icons
-import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import GroupIcon from '@mui/icons-material/Group';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
-import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'
+import GroupIcon from '@mui/icons-material/Group'
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney'
+import AccountBalanceIcon from '@mui/icons-material/AccountBalance'
 
 const Widget = ({ type }) => {
   let data
@@ -17,7 +17,7 @@ const Widget = ({ type }) => {
       data = {
         title: 'USERS',
         isMoney: false,
-        link: 'See all users',
+        link: 'View all',
         icon: (
           <GroupIcon className="icon icon--s icon--blue flex-self--end " />
         )
@@ -27,7 +27,7 @@ const Widget = ({ type }) => {
       data = {
         title: 'ORDERS',
         isMoney: false,
-        link: 'See all orders',
+        link: 'View all',
         icon: (
           <ShoppingCartIcon className="icon icon--s icon--blue flex-self--end " />
         )
@@ -37,7 +37,7 @@ const Widget = ({ type }) => {
       data = {
         title: 'EARNINGS',
         isMoney: true,
-        link: 'View net earnings',
+        link: 'View all',
         icon: (
           <AttachMoneyIcon className="icon icon--s icon--blue flex-self--end " />
         )
@@ -47,7 +47,7 @@ const Widget = ({ type }) => {
       data = {
         title: 'BALANCE',
         isMoney: true,
-        link: 'See details',
+        link: 'View all',
         icon: (
           <AccountBalanceIcon className="icon icon--s icon--blue flex-self--end " />
         )

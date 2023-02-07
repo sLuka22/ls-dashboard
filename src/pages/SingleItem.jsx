@@ -17,7 +17,7 @@ const SingleItem = () => {
           <SingleCrypto />
           <Chart />
         </div>
-        <div className="charts__container container flex m-top--m">
+        <div className="crypto-data-table__container container flex m-top--m">
           <CryptoDataTable />
         </div>
       </div>
