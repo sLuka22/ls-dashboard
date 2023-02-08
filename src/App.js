@@ -11,8 +11,8 @@ function App() {
         <Routes>
           <Route path='/'>
             <Route index element={<Home />} />
-            <Route path='crypto-list'>
-              <Route index element={<CryptoList />} />
+            <Route path='crypto-list/'>
+              <Route index element={<SingleItem/>} />
               <Route path=':cryptoId' element={<SingleItem />} />
             </Route>
           </Route>

@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { useState, useEffect } from 'react'
+import { NavLink, Link } from 'react-router-dom'
 import axios from "axios"
 import CryptoData from "../CryptoData"
 import Paper from '@mui/material/Paper'
@@ -17,7 +18,6 @@ const columns = [
   {
     field: 'image',
     headerName: 'Icon',
-    className: 'testiranje',
     renderCell: (params) => <img src={params.value} className={ 'icon icon--s' } />,
   },
   { field: 'name', headerName: 'Name' },
@@ -41,10 +41,22 @@ const columns = [
   },
 ]
 
-const CryptoDataTable = () => {
+const CryptoDataTable = (props) => {
   const [data, setData] = useState(null)
   const [page, setPage] = React.useState(0)
   const [rowsPerPage, setRowsPerPage] = React.useState(25)
+
+  const handleRowClick = (clickedId, symbol, currentPrice, marketCap, circulatingSupply, allTimeHigh) => {
+    const combinedArray = {
+      id: clickedId,
+      symbol: symbol,
+      currentPrice: currentPrice,
+      marketCap: marketCap,
+      circulatingSupply: circulatingSupply,
+      allTimeHigh: allTimeHigh,
+      cryptoList: data }
+    props.onSelect(combinedArray)
+  }
 
   useEffect(() => {
     axios
@@ -54,10 +66,11 @@ const CryptoDataTable = () => {
           id: item.id,
           image: item.image,
           name: item.name,
+          symbol: item.symbol,
           current_price: item.current_price,
           market_cap: item.market_cap,
           ath: item.ath,
-          circulating_supply : item.circulating_supply
+          circulating_supply : item.circulating_supply,
         }))
         setData(filteredData)
       })
@@ -79,7 +92,7 @@ const CryptoDataTable = () => {
     <div className="flex flex--center width--full">
     {data ?
       <Paper className='cryptoList-table__container' sx={{ width: '100%', overflow: 'hidden' }}>
-        <TableContainer className='testiranje' sx={{ maxHeight: '50vh' }}>
+        <TableContainer sx={{ maxHeight: '50vh' }}>
           <Table stickyHeader aria-label="sticky table">
             <TableHead>
               <TableRow>
@@ -101,16 +114,18 @@ const CryptoDataTable = () => {
                   .map((row) => {
                     return (
                       <TableRow hover role="checkbox" tabIndex={-1} key={row.id}>
-                        {columns.map((column) => {
-                          const value = row[column.field]
-                          return (
-                            <TableCell key={column.field} align={column.align}>
-                              {column.renderCell
-                                ? column.renderCell({ value })
-                                : value}
-                            </TableCell>
-                          )
-                        })}
+                          {columns.map((column) => {
+                            const value = row[column.field]
+                            return (
+                              <TableCell key={column.field} align={column.align} onClick={() => handleRowClick(row.symbol, row.id, row.current_price, row.market_cap, row.circulating_supply, row.ath)}>
+                                {/* <NavLink key={row.symbol} to={row.symbol} onClick={() => handleRowClick(row.symbol)} > */}
+                                  {column.renderCell
+                                    ? column.renderCell({ value })
+                                    : value}
+                                {/* </NavLink> */}
+                              </TableCell>
+                            )
+                          })}
                       </TableRow>
                     )
                   })

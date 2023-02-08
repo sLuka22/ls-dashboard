@@ -5,20 +5,30 @@ import React, { useState, useEffect } from 'react'
 import axios from "axios"
 import CryptoDataTable from "../components/CryptoDataTable"
 import SingleCrypto from "../components/SingleCrypto"
-import Chart from "../components/Chart"
+import CryptoChart from "../components/CryptoChart"
 
 const SingleItem = () => {
+  const [selectedData, setSelectedData] = useState(null)
+
+  const handleSelect = (data) => {
+    setSelectedData(data)
+  }
+
+  // console.log(selectedData)
+
   return (
     <main className="main flex bg--default">
       <Sidebar />
       <div className="homepage home-page__container flex__item flex__item--hexa">
         <Navbar />
-        <div className="single-crypto__container container flex m-top--s">
-          <SingleCrypto />
-          <Chart />
-        </div>
+        {selectedData ?
+          <div className="single-crypto__container container flex m-top--s">
+            <SingleCrypto selectedData={selectedData} />
+            <CryptoChart selectedData={selectedData} />
+          </div>
+        : null}
         <div className="crypto-data-table__container container flex m-top--m">
-          <CryptoDataTable />
+          <CryptoDataTable onSelect={handleSelect} />
         </div>
       </div>
     </main>
