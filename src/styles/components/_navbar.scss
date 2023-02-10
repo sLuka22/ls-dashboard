@@ -22,4 +22,4 @@
   @include breakpoint(laptop) { display: none; }
 }
 
-.navbar__icons .icon { cursor: pointer; }
+.navbar__wrapper .icon__wrapper { cursor: pointer; }

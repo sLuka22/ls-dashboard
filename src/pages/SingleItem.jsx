@@ -1,8 +1,7 @@
+// Components
 import Navbar from "../components/Navbar"
 import Sidebar from "../components/Sidebar"
-import Widget from "../components/Widget"
 import React, { useState, useEffect } from 'react'
-import axios from "axios"
 import CryptoDataTable from "../components/CryptoDataTable"
 import SingleCrypto from "../components/SingleCrypto"
 import CryptoChart from "../components/CryptoChart"

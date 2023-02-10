@@ -4,6 +4,8 @@
   @include breakpoint(laptop) { width: 30%; }
 }
 
+.featured--button { padding: initial !important; }
+
 .featured .bottom .content {
   padding: 12px 20px 18px;
 

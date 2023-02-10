@@ -54,7 +54,7 @@ const CryptoChart = (props) => {
 
   return cryptoSymbol ? ( // It should be cryptoChartData && cryptoSymbol when the API is working
       <div className="chart grid-item-two component flex__item flex__item--quadra flex flex--vertical">
-        <div className="chart-title"><h2 className="title c--secondary f--s f--bolder">4 HOUE INTERVAL ({cryptoParam})</h2></div>
+        <div className="chart-title"><h2 className="title c--secondary f--s f--bolder">4 HOUR INTERVAL ({cryptoParam})</h2></div>
         <div className="chart-responsive__container m-top--s">
         <ResponsiveContainer height='100%' width='100%'>
           <LineChart

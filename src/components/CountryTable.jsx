@@ -56,7 +56,6 @@ const rows = [
   createData('Ireland', 'IE', 4857000, 70273),
   createData('Japan', 'JP', 126317000, 377973),
   createData('United Kingdom', 'GB', 67545757, 242495),
-  createData('Brazil', 'BR', 210147125, 8515767),
 ]
 
 const CountryTable = () => {

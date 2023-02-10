@@ -1,0 +1,30 @@
+{
+  "name": {
+    "title": "Name",
+    "isNumber": false,
+    "content": "Luka Štiglic",
+    "link": "View my CV",
+    "icon": "(<GroupIcon className='icon icon--s icon--blue flex-self--end ' />)"
+  },
+  "age": {
+    "title": "Age",
+    "isNumber": "true",
+    "content": "22",
+    "link": "View my CV",
+    "icon": "(<ShoppingCartIcon className='icon icon--s icon--blue flex-self--end ' />)"
+  },
+  "experience": {
+    "title": "Years of experience:",
+    "isNumber": true,
+    "content": 1,
+    "link": "View my CV",
+    "icon": "(<AttachMoneyIcon className='icon icon--s icon--blue flex-self--end ' />)"
+  },
+  "position": {
+    "title": "Position",
+    "isNumber": false,
+    "content": "Junior Front-End Developer",
+    "link": "View my CV",
+    "icon": "(<AccountBalanceIcon className='icon icon--s icon--blue flex-self--end ' />)"
+  }
+}

@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+// Pages
 import Home from './pages/Home';
-import CryptoList from './pages/CryptoList';
 import SingleItem from './pages/SingleItem';
 
 function App() {
@@ -13,7 +13,6 @@ function App() {
             <Route index element={<Home />} />
             <Route path='crypto-list/'>
               <Route index element={<SingleItem/>} />
-              <Route path=':cryptoId' element={<SingleItem />} />
             </Route>
           </Route>
         </Routes>

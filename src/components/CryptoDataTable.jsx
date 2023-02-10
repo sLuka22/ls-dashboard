@@ -92,7 +92,7 @@ const CryptoDataTable = (props) => {
     <div className="flex flex--center width--full">
     {data ?
       <Paper className='cryptoList-table__container' sx={{ width: '100%', overflow: 'hidden' }}>
-        <TableContainer sx={{ maxHeight: '50vh' }}>
+        <TableContainer className="crypto-data-table__table-container">
           <Table stickyHeader aria-label="sticky table">
             <TableHead>
               <TableRow>

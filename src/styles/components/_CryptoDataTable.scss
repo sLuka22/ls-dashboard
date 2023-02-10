@@ -1,1 +1,6 @@
 .cryptoList-table__container p { margin: initial; }
+.crypto-data-table__table-container {
+  max-height: 82vh;
+
+  @include breakpoint (laptop) { max-height: 50vh; }
+}
