@@ -2,7 +2,7 @@
   display: none;
   position: sticky;
   top: 0;
-  min-width: 175px;
+  min-width: 190px;
 
   @include breakpoint(laptop) { display: block; }
 }

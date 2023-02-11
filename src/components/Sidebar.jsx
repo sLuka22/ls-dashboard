@@ -1,4 +1,4 @@
-import { NavLink, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 // Icons
 import AccountCircleIcon from '@mui/icons-material/AccountCircle'
@@ -6,6 +6,7 @@ import SailingIcon from '@mui/icons-material/Sailing'
 import SportsSoccerIcon from '@mui/icons-material/SportsSoccer'
 import AutoStoriesIcon from '@mui/icons-material/AutoStories'
 import CurrencyBitcoinIcon from '@mui/icons-material/CurrencyBitcoin'
+import ArticleIcon from '@mui/icons-material/Article'
 
 const Sidebar = () => {
   return (
@@ -49,6 +50,12 @@ const Sidebar = () => {
             <li className="menu__item flex flex--middle">
               <CurrencyBitcoinIcon className="icon icon--s icon--blue" />
               <span className="link-text">Crypto</span>
+            </li>
+          </Link>
+          <Link to="/cv" className="f--bold t--no-decoration">
+            <li className="menu__item flex flex--middle">
+              <ArticleIcon className="icon icon--s icon--blue" />
+              <span className="link-text">CV</span>
             </li>
           </Link>
         </ul>

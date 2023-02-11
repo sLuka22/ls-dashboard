@@ -1,6 +1,5 @@
 import * as React from 'react'
 import { useState, useEffect } from 'react'
-import { NavLink, Link } from 'react-router-dom'
 import axios from "axios"
 import CryptoData from "../CryptoData"
 import Paper from '@mui/material/Paper'
@@ -89,9 +88,9 @@ const CryptoDataTable = (props) => {
   }
 
   return (
-    <div className="flex flex--center width--full">
+    <div className="component flex flex--center width--full">
     {data ?
-      <Paper className='cryptoList-table__container' sx={{ width: '100%', overflow: 'hidden' }}>
+      <Paper className='cryptoList-table__container' sx={{ width: '100%', overflow: 'hidden', boxShadow: 'initial' }}>
         <TableContainer className="crypto-data-table__table-container">
           <Table stickyHeader aria-label="sticky table">
             <TableHead>

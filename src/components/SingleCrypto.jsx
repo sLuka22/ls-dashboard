@@ -1,14 +1,6 @@
 import { useState } from 'react'
 import axios from "axios"
 
-// Icons
-import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'
-import GroupIcon from '@mui/icons-material/Group'
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
-import AttachMoneyIcon from '@mui/icons-material/AttachMoney'
-import AccountBalanceIcon from '@mui/icons-material/AccountBalance'
-
-
 const SingleCrypto = (props) => {
   // const [ cryptoSymbol, setCryptoSymbol] = useState(props.selectedData.symbol)
 

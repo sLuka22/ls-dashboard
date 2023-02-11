@@ -13,8 +13,6 @@ const SingleItem = () => {
     setSelectedData(data)
   }
 
-  // console.log(selectedData)
-
   return (
     <main className="main flex bg--default">
       <Sidebar />

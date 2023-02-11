@@ -25,7 +25,6 @@ const Home = () => {
                 isNumber={data[type].isNumber}
                 content={data[type].content}
                 link={data[type].link}
-                icon={data[type].icon}
               />
             ))}
             </div>
