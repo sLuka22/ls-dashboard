@@ -1,5 +1,5 @@
 // Chart import
-import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts'
 
 const data = [
   {
@@ -37,14 +37,14 @@ const data = [
     CurrentWeekWorkoutTime: 45,
     PastWeekWorkoutTime: 60
   },
-];
+]
 
 const Chart = () => {
   return (
     <div className="chart component flex__item flex__item--quadra flex flex--vertical">
-      <div className="chart-title"><h2 className="title c--secondary f--s f--bolder">LAST TWO WEEKS (workout time)</h2></div>
+      <div className="chart-title"><h2 className="title c--secondary f--s f--bolder">LAST TWO WEEKS (workout time in minutes)</h2></div>
       <div className="chart-responsive__container m-top--s">
-        <ResponsiveContainer width="100%" height="100%" maxHeight={"400px"}>
+        <ResponsiveContainer className={'chart'} width="100%">
           <AreaChart data={data}
             margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
             <defs>
@@ -58,7 +58,7 @@ const Chart = () => {
               </linearGradient>
             </defs>
             <XAxis dataKey="name" stroke='#a6a6a6'/>
-            <YAxis stroke='#a6a6a6' label={{ value: 'measured in minutes', angle: -90, position: 'insideLeft', textAnchor: 'middle' }} />
+            <YAxis stroke='#a6a6a6' />
             <CartesianGrid stroke='#dddddd' strokeDasharray="3 3" />
             <Tooltip />
             <Area name='Current week workout time' type="monotone" dataKey="CurrentWeekWorkoutTime" stroke="#66b2ff" fillOpacity={1} fill="url(#colorCurrentWeekWorkoutTime)" />

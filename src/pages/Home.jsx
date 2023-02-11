@@ -1,27 +1,38 @@
+// Components
+import CountryTable from "../components/CountryTable"
 import Navbar from "../components/Navbar"
 import Sidebar from "../components/Sidebar"
 import Widget from "../components/Widget"
 import Chart from "../components/Chart"
 import Featured from "../components/Featured"
-import CountryTable from "../components/CountryTable"
+
+
+// Data
+import dataJSON from "../Source/aboutMe.json"
 
 const Home = () => {
+  const data = dataJSON
+  console.log(data)
     return (
         <main className="main flex bg--default">
           <Sidebar />
           <div className="homepage home-page__container flex__item flex__item--hexa">
             <Navbar />
-            <div className="widgets__container container flex m-top--s">
-              <Widget type="user" />
-              <Widget type="order" />
-              <Widget type="earnings" />
-              <Widget type="balance" />
+            <div id="identification" className="widgets__container container m-top--s">
+            {Object.keys(data).map((type) => (
+              <Widget
+                title={data[type].title}
+                isNumber={data[type].isNumber}
+                content={data[type].content}
+                link={data[type].link}
+              />
+            ))}
             </div>
-            <div className="charts__container container flex m-top--m">
+            <div id="statistics" className="charts__container container m-top--m">
               <Featured />
               <Chart />
             </div>
-          <div className="list__container container m-top--m">
+          <div id="country-table" className="list__container container m-top--m">
             <CountryTable />
           </div>
           </div>

@@ -1,1 +1,8 @@
-.chart-responsive__container { height: 100%; }
+.chart-responsive__container {
+  height: 100%;
+  min-height: 200px;
+}
+.chart-responsive__container .chart {
+  // height: 400px;
+  max-height: 300px;
+}

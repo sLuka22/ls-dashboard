@@ -1,3 +1,11 @@
+.sidebar__main {
+  display: none;
+  position: sticky;
+  top: 0;
+  min-width: 190px;
+
+  @include breakpoint(laptop) { display: block; }
+}
 .sidebar__main .title {
   font-size: 10px;
   margin-bottom: 5px;
@@ -19,7 +27,7 @@
 }
 
 .sidebar__main .collor-options {
-  padding: 5px;
+  padding: 10px;
 
   .collor-option {
     margin-right: 10px;
@@ -28,3 +36,24 @@
     cursor: pointer;
   }
 }
+
+// MObile sidebar
+
+.sidebar__main.mobile {
+  display: block;
+  position: absolute;
+  padding: 0 0 10px 10px;
+  top: 50;
+  right: 0;
+  transform: translateX(200px);
+  transition: 0.5s;
+  box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+  z-index: 999;
+
+  .menu__item { padding: 10px; }
+
+  @include breakpoint(laptop) { display: none; }
+
+  &.activeSidebar { transform: translateX(0); }
+}
+

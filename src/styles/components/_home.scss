@@ -1,4 +1,19 @@
 .container {
   gap: 20px;
   padding: 0 20px;
+  padding-bottom: 20px;
+}
+
+
+.widgets__container {
+  display: grid;
+
+  @include breakpoint(mobile) { grid-template-columns: repeat(2, 1fr); }
+  @include breakpoint(laptop) { grid-template-columns: repeat(4, 1fr); }
+}
+
+.charts__container {
+  display: grid;
+
+  @include breakpoint(laptop) { grid-template-columns: repeat(2, 1fr); }
 }

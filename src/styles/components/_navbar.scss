@@ -9,10 +9,17 @@
   padding: 5px;
 
   input {
+    min-width: 0;
     border: initial;
     outline: initial;
     background-color: transparent;
   }
 }
 
-.navbar__icons .icon { cursor: pointer; }
+.navbar__menu .icon {
+  display: block;
+
+  @include breakpoint(laptop) { display: none; }
+}
+
+.navbar__wrapper .icon__wrapper { cursor: pointer; }

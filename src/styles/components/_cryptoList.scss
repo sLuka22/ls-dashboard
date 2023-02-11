@@ -1,0 +1,8 @@
+.single-crypto__container {
+  .grid-item-one { grid-area: "content"; }
+  .grid-item-two { grid-area: "chart"; }
+
+  display: grid;
+
+  @include breakpoint(laptop) { grid-template-areas: "content chart"; }
+}

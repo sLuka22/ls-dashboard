@@ -1,0 +1,26 @@
+{
+  "name": {
+    "title": "Name",
+    "isNumber": false,
+    "content": "Luka Štiglic",
+    "link": "View my CV"
+  },
+  "age": {
+    "title": "Age",
+    "isNumber": "true",
+    "content": "22",
+    "link": "View my CV"
+  },
+  "experience": {
+    "title": "Years of experience:",
+    "isNumber": true,
+    "content": 1,
+    "link": "View my CV"
+  },
+  "position": {
+    "title": "Position",
+    "isNumber": false,
+    "content": "Junior Front-End Developer",
+    "link": "View my CV"
+  }
+}

@@ -38,8 +38,6 @@ img, svg {
 }
 svg { pointer-events: none; }
 
-a { color: $dashboard_gray--dark; }
-
 hr {
   display: block;
   height: 0;
@@ -179,6 +177,10 @@ img.responsive__element { object-fit: cover; }
 
 // Full height
 .height--full { height: 100vh; }
+.height--max { height: 100%; }
+
+// FUll width
+.width--full { width: 100%; }
 
 // Rotations
 .rotate--cw { transform: rotate(90deg); }
@@ -188,6 +190,7 @@ img.responsive__element { object-fit: cover; }
 .bg--default { background-color: $dashboard_white !important; }
 .bg--dark { background-color: $dashboard_black !important; }
 .bg--green { background-color: $dashboard_green !important; }
+.bg-blue--light { background-color: $dashboard_blue--light !important; }
 
 .border { border: solid 1px $dashboard_gray; }
 .border--top { border-top: solid 1px $dashboard_gray; }

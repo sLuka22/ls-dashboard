@@ -1,13 +1,13 @@
-import * as React from 'react';
-import Paper from '@mui/material/Paper';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TablePagination from '@mui/material/TablePagination';
-import TableRow from '@mui/material/TableRow';
-import { styled } from '@mui/material/styles';
+import * as React from 'react'
+import Paper from '@mui/material/Paper'
+import Table from '@mui/material/Table'
+import TableBody from '@mui/material/TableBody'
+import TableCell from '@mui/material/TableCell'
+import TableContainer from '@mui/material/TableContainer'
+import TableHead from '@mui/material/TableHead'
+import TablePagination from '@mui/material/TablePagination'
+import TableRow from '@mui/material/TableRow'
+import { styled } from '@mui/material/styles'
 
 
 const columns = [
@@ -27,11 +27,11 @@ const columns = [
     align: 'right',
     format: (value) => value.toLocaleString('en-US'),
   }
-];
+]
 
 function createData(name, code, population, size) {
-  const density = population / size;
-  return { name, code, population, size, density };
+  const density = population / size
+  return { name, code, population, size, density }
 }
 
 const StyledTableRow = styled(TableRow)(({ theme }) => ({
@@ -42,7 +42,7 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   '&:last-child td, &:last-child th': {
     border: 0,
   },
-}));
+}))
 
 const rows = [
   createData('Australia', 'AU', 25475400, 7692024),
@@ -56,21 +56,20 @@ const rows = [
   createData('Ireland', 'IE', 4857000, 70273),
   createData('Japan', 'JP', 126317000, 377973),
   createData('United Kingdom', 'GB', 67545757, 242495),
-  createData('Brazil', 'BR', 210147125, 8515767),
-];
+]
 
 const CountryTable = () => {
-  const [page, setPage] = React.useState(0);
-  const [rowsPerPage, setRowsPerPage] = React.useState(5);
+  const [page, setPage] = React.useState(0)
+  const [rowsPerPage, setRowsPerPage] = React.useState(5)
 
   const handleChangePage = (event, newPage) => {
-    setPage(newPage);
-  };
+    setPage(newPage)
+  }
 
   const handleChangeRowsPerPage = (event) => {
-    setRowsPerPage(+event.target.value);
-    setPage(0);
-  };
+    setRowsPerPage(+event.target.value)
+    setPage(0)
+  }
   return (
     <div className="table__wrapper component">
       <div className="title"><h2 className="title c--secondary f--s f--bolder">VACATION WISHLIST</h2></div>
@@ -98,17 +97,17 @@ const CountryTable = () => {
                     return (
                       <TableRow hover role="checkbox" tabIndex={-1} key={row.code}>
                         {columns.map((column) => {
-                          const value = row[column.id];
+                          const value = row[column.id]
                           return (
                             <TableCell key={column.id} align={column.align}>
                               {column.format && typeof value === 'number'
                                 ? column.format(value)
                                 : value}
                             </TableCell>
-                          );
+                          )
                         })}
                       </TableRow>
-                    );
+                    )
                   })}
               </TableBody>
             </Table>

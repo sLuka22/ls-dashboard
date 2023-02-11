@@ -1,76 +1,22 @@
+import { Link } from 'react-router-dom'
+
 // Icons
-import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import GroupIcon from '@mui/icons-material/Group';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
-import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
+import InfoIcon from '@mui/icons-material/Info'
 
-const Widget = ({ type }) => {
-  let data
-
-  //temporary
-  const amount = 100
-  const percentage = 20
-
-  switch (type) {
-    case 'user':
-      data = {
-        title: 'USERS',
-        isMoney: false,
-        link: 'See all users',
-        icon: (
-          <GroupIcon className="icon icon--s icon--blue flex-self--end " />
-        )
-      }
-      break
-    case 'order':
-      data = {
-        title: 'ORDERS',
-        isMoney: false,
-        link: 'See all orders',
-        icon: (
-          <ShoppingCartIcon className="icon icon--s icon--blue flex-self--end " />
-        )
-      }
-      break
-    case 'earnings':
-      data = {
-        title: 'EARNINGS',
-        isMoney: true,
-        link: 'View net earnings',
-        icon: (
-          <AttachMoneyIcon className="icon icon--s icon--blue flex-self--end " />
-        )
-      }
-      break
-    case 'balance':
-      data = {
-        title: 'BALANCE',
-        isMoney: true,
-        link: 'See details',
-        icon: (
-          <AccountBalanceIcon className="icon icon--s icon--blue flex-self--end " />
-        )
-      }
-      break
-
-    default:
-      break
-  }
-
+const Widget = ({title, isNumber, content, link }) => {
   return (
     <div className="dynamic-widget component flex__item flex flex--apart">
       <div className="left flex flex--vertical flex--apart">
-        <span className="title c--secondary f--bolder f--s">{data.title}</span>
-        <span className="counter f--xxl">{amount}{data.isMoney && ' €'}</span>
-        <span className="all-users__link"><a href="">{data.link}</a></span>
+        <span className="title c--secondary f--bolder f--s">{title}</span>
+        <span className={`counter ${isNumber ? 'f--xxl': 'f--l'}`}>{content}</span>
+        <Link to="/cv" className="widget-link">{link}</Link>
       </div>
       <div className="right flex flex--vertical flex--apart">
         <div className="percentage flex flex--middle">
-          <KeyboardArrowUpIcon className="icon icon--s icon--blue" />
-          <span className="percentage-value f--s">{percentage} %</span>
+          <InfoIcon className="icon icon--s icon--blue" />
+          <span className="percentage-value f--s"></span>
         </div>
-        {data.icon}
+        {/* {icon} */}
       </div>
     </div>
   )
