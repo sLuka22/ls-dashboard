@@ -1,3 +1,6 @@
+## Project link
+https://ls-dashboard-sable.vercel.app/
+
 ## Available Scripts
 
 In the project directory, you can run:
