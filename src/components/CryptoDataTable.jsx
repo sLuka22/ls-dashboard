@@ -61,6 +61,7 @@ const CryptoDataTable = (props) => {
     axios
       .request(CryptoData)
       .then(response => {
+        // Mapped data for the crypto data table
         const filteredData = response.data.map(item => ({
           id: item.id,
           image: item.image,

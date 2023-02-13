@@ -17,6 +17,8 @@ const CryptoChart = (props) => {
     setCryptoParam(cryptoSymbol.toUpperCase() + 'USDT')
   }, [cryptoSymbol])
 
+  // Below stated code is used for displaying a 4 hour single crypto chart. Chart is currently using static data because of API limitations (500 requests per month)
+
   // const options = {
   //   method: 'GET',
   //   url: 'https://binance43.p.rapidapi.com/klines',
