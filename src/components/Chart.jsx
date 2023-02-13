@@ -1,6 +1,7 @@
 // Chart import
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts'
 
+// Chart data
 const data = [
   {
     name: 'Day 1',

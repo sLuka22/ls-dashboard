@@ -19,6 +19,7 @@ const Home = () => {
           <div className="homepage home-page__container flex__item flex__item--hexa">
             <Navbar />
             <div id="identification" className="widgets__container container m-top--s">
+            {/* sending the data so it can be used inside the Widget component as a prop */}
             {Object.keys(data).map((type) => (
               <Widget
                 title={data[type].title}
