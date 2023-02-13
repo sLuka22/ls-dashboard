@@ -58,27 +58,28 @@ const CryptoChart = (props) => {
       <div className="chart grid-item-two component flex__item flex__item--quadra flex flex--vertical">
         <div className="chart-title"><h2 className="title c--secondary f--s f--bolder">4 HOUR INTERVAL ({cryptoParam})</h2></div>
         <div className="chart-responsive__container m-top--s">
-        <ResponsiveContainer height='100%' width='100%'>
-          <LineChart
-            layout="horizontal"
-            width='100%'
-            height='100%'
-            data={data}
-            margin={{
-              top: 20,
-              right: 30,
-              left: 20,
-              bottom: 5
-            }}
-          >
-            <CartesianGrid strokeDasharray="3 3" />
-            <YAxis type="number" domain={[0, "dataMax + 1000"]} />
-            <XAxis  dataKey="time" type="category" />
-            <Tooltip />
-            <Line dataKey="price" stroke="#8884d8" />
-          </LineChart>
-        </ResponsiveContainer>
+          <ResponsiveContainer height='100%' width='100%'>
+            <LineChart
+              layout="horizontal"
+              width='100%'
+              height='100%'
+              data={data}
+              margin={{
+                top: 20,
+                right: 30,
+                left: 20,
+                bottom: 5
+              }}
+            >
+              <CartesianGrid strokeDasharray="3 3" />
+              <YAxis type="number" domain={[0, "dataMax + 1000"]} />
+              <XAxis  dataKey="time" type="category" />
+              <Tooltip />
+              <Line dataKey="price" stroke="#8884d8" />
+            </LineChart>
+          </ResponsiveContainer>
         </div>
+        <span className="c--secondary f--xs">Note: chart is currently displaying static data because of the API limitations (500 requests per month).</span>
       </div>
   ) : null
 }
