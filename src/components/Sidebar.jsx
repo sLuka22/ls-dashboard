@@ -13,7 +13,7 @@ const Sidebar = () => {
     <div className="sidebar__main bg--default flex__item border--right height--full">
       <div className="sidebar__top flex flex--vertical flex--middle flex--center border--bottom">
         <Link to="/" className="t--no-decoration">
-          <span className="logo f--bolder">Personal website</span>
+          <span className="logo f--bolder">Luka Štiglic</span>
         </Link>
       </div>
       <div className="sidebar__middle m-left--s">
@@ -61,11 +61,6 @@ const Sidebar = () => {
         </ul>
       </div>
       <div className="sidebar__bottom m-left--s">
-        <p className="title m-top--s f--bolder">THEME</p>
-        <div className="collor-options flex">
-          <div className="collor-option icon icon--s bg--default"></div>
-          <div className="collor-option icon icon--s bg--dark"></div>
-        </div>
       </div>
     </div>
   )
