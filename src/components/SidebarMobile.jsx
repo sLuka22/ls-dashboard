@@ -77,11 +77,6 @@ const SidebarMobile = (props) => {
           </ul>
         </div>
         <div className="sidebar__bottom">
-          <p className="title m-top--s f--bolder">THEME</p>
-          <div className="collor-options flex">
-            <div className="collor-option icon icon--s bg--default"></div>
-            <div className="collor-option icon icon--s bg--dark"></div>
-          </div>
         </div>
       </div>
     </div>
